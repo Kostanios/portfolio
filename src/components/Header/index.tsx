@@ -13,9 +13,7 @@ const Header = ({ contacts, cvLink }: IHeader) => (
       <a href="#summery">My</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-      <a download={cvLink} href="">
-        CV file
-      </a>
+      <a href={cvLink}>CV</a>
     </nav>
     <Contacts contacts={contacts} />
   </header>

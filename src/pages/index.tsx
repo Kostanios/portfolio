@@ -52,7 +52,12 @@ export default function Home({
     <>
       <Head>
         <title>{my.fields.name}</title>
-        <meta name="description" content="Javascript Web developer" />
+        <meta
+          name="description"
+          content={`${my.fields.name} portfolio - ${skills.items.map(
+            (skill) => ` ${skill.fields.name} developer`
+          )}`}
+        />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={my.fields.avatar.fields.file.url} />
       </Head>
@@ -67,9 +72,7 @@ export default function Home({
             <Image
               className={styles.avatar}
               src={`https:${my.fields.avatar.fields.file.url}`}
-              alt={`${my.fields.name} ${skills.items.map(
-                (skill) => ` ${skill.fields.name} developer`
-              )}`}
+              alt={my.fields.name}
               width={200}
               height={200}
             />
