@@ -35,3 +35,5 @@ fly.toml
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.idea
