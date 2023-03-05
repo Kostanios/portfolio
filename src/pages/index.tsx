@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Header from "@/components/Header";
 import { GetServerSideProps } from "next";
@@ -69,12 +68,10 @@ export default function Home({
         <section id="summery" className={styles.summery}>
           <div>
             <p>&nbsp;{my.fields.summery}</p>
-            <Image
+            <img
               className={styles.avatar}
-              src={`https:${my.fields.avatar.fields.file.url}`}
+              src={`http:${my.fields.avatar.fields.file.url}`}
               alt={my.fields.name}
-              width={200}
-              height={200}
             />
           </div>
         </section>
